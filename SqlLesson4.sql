@@ -169,6 +169,10 @@ values
 (4,1,1);
 
 alter table GetWeapon
+add constraint PK_GetWeaponSoldierGetterSetterId
+primary key (SoldierGetterId,SoldierSetterId)
+
+alter table GetWeapon
 add constraint FK_SoldierGetterId
 foreign key (SoldierGetterId) references ArmoryGetter(SoldierGetterId)
 go
